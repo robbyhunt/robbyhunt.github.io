@@ -1,9 +1,9 @@
 // font size
-var FONT = 32;
+var FONT = 25;
 
 // map dimensions
-var ROWS = 15;
-var COLS = 25;
+var ROWS = 30;
+var COLS = 50;
 
 // number of actors per level (includes player)
 var ACTORS = 10;
