@@ -20,13 +20,15 @@ function preload() {
 
     game.load.image('sky', 'assets/sky.png');
     game.load.image('ground', 'assets/platform.png');
-    game.load.image('star', 'assets/star.png');
+    game.load.image('echan', 'assets/echan.png');
     game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
 
 }
 
 var platforms;
 var player;
+var cursors;
+var stars;
 
 function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -57,11 +59,23 @@ function create() {
     player.animations.add('right', [5, 6, 7, 8], 10, true);
 
     cursors = game.input.keyboard.createCursorKeys();
+
+    chans = game.add.group();
+    chans.enableBody = true;
+
+    for (var i = 0; i < 1; i++)
+    {
+        var chan = chans.create(i * 70, 0, 'echan');
+        chan.body.gravity.y = 600;
+        chan.body.bounce.y = 0.25 + Math.random() * 0.2;
+    }
 }
 
 function update() {
 
     var hitPlatform = game.physics.arcade.collide(player, platforms);
+    game.physics.arcade.collide(chans, platforms);
+    game.physics.arcade.overlap(player, chans, collectChan, null, this);
 
     player.body.velocity.x = 0;
 
@@ -83,7 +97,13 @@ function update() {
 
     if (cursors.up.isDown && player.body.touching.down && hitPlatform)
     {
-        player.body.velocity.y = -950;
+        player.body.velocity.y = -550;
+    }
+
+
+
+    function collectChan (player, chan) {
+        chan.kill();
     }
 }
 
