@@ -49,7 +49,7 @@ function initMap() {
 	for (var y = 0; y < ROWS; y++) {
 		var newRow = [];
 		for (var x = 0; x < COLS; x++) {
-			if (Math.random() > 0.8)
+			if (Math.random() > 0.2)
 				newRow.push('T');
 			else
 				newRow.push('.');
