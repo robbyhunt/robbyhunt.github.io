@@ -50,7 +50,7 @@ function initMap() {
 		var newRow = [];
 		for (var x = 0; x < COLS; x++) {
 			if (Math.random() > 0.8)
-				newRow.push('#');
+				newRow.push('T');
 			else
 				newRow.push('.');
 		}
