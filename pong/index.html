@@ -100,29 +100,29 @@ function moveEverything() {
     ballX += ballSpeedX;
     ballY += ballSpeedY;
 
+    console.log(ballX);
+
     if(ballX > canvas.width-25) {
-        if (ballY > paddle2Y &&
-            ballY < paddle2Y+PADDLE_HEIGHT) {
+        if (ballY > paddle2Y-5 &&
+            ballY < paddle2Y+(PADDLE_HEIGHT+5)) {
                 ballSpeedX = -ballSpeedX;
              
-                var deltaY = ballY
-                        -(paddle2Y+PADDLE_HEIGHT/2);
+                var deltaY = ballY-(paddle2Y+PADDLE_HEIGHT/2);
                 ballSpeedY = deltaY * 0.35;
-        } else {
+        } else if(ballX >= 800){
             player1Score++;
             ballReset();
         }
     }
     
-    if(ballX < 15) {
-        if (ballY > paddle1Y &&
-            ballY < paddle1Y+PADDLE_HEIGHT) {
+    if(ballX < 25) {
+        if (ballY > paddle1Y-5 &&
+            ballY < paddle1Y+(PADDLE_HEIGHT+5)) {
                 ballSpeedX = -ballSpeedX;
 
-                var deltaY = ballY
-                        -(paddle1Y+PADDLE_HEIGHT/2);
+                var deltaY = ballY-(paddle1Y+PADDLE_HEIGHT/2);
                 ballSpeedY = deltaY * 0.35;
-        } else {
+        } else if(ballX <= 0){
             player2Score++;
             ballReset();
         }
