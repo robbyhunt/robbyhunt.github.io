@@ -1,29 +1,42 @@
 body {
+    background-color: #cecece;
+    background-image: url('assets/bgg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom; 
     font-family: 'Press Start 2P', cursive;
-    font-size: 150%;
-    background-color: black;
+    font-size: 100%;
     color: white;
 }
 
-ul {
-    display: flex;
-    height: 85vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    list-style-type: none;
-}
-
-li {
-    padding: 25px;
-}
-
 a {
-    color: rgb(200, 200, 200);
+    color: white;
     text-decoration-line: none;
-
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
 a:hover {
     color: grey;
+    
+}
+
+#screenspace {
+    display: flex;
+    justify-content: center;
+}
+
+#list {
+    list-style-type: none;
+    position: absolute;
+    bottom: 425px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80px;
+    width: 435px;
+}
+
+li {
+    padding-left: 20px;
 }
