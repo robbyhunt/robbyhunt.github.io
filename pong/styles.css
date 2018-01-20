@@ -1,0 +1,17 @@
+html {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    font-size: 400%;
+    font-family: 'Metal Mania';
+}
+
+#body {
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
