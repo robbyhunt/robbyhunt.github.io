@@ -30,7 +30,7 @@ var showingWinScreen = true;
 var paddle1Y = 168;
 var paddle2Y = 168;
 const PADDLE_HEIGHT = 64;
-const PADDLE_THICKNESS = 10;
+const PADDLE_THICKNESS = 5;
 
 function calculateMousePos(evt) {
     var rect = canvas.getBoundingClientRect();
@@ -100,7 +100,7 @@ function moveEverything() {
     ballX += ballSpeedX;
     ballY += ballSpeedY;
 
-    if(ballX > canvas.width-15) {
+    if(ballX > canvas.width-25) {
         if (ballY > paddle2Y &&
             ballY < paddle2Y+PADDLE_HEIGHT) {
                 ballSpeedX = -ballSpeedX;
@@ -165,7 +165,7 @@ function drawEverything() {
     drawNet();
     // paddles
     colorRect(10,paddle1Y,PADDLE_THICKNESS,PADDLE_HEIGHT, 'white');
-    colorRect(canvas.width-20,paddle2Y,PADDLE_THICKNESS,PADDLE_HEIGHT, 'white');
+    colorRect(canvas.width-15,paddle2Y,PADDLE_THICKNESS,PADDLE_HEIGHT, 'white');
     // ball
     colorCircle(ballX, ballY, 5, 'white');
 
