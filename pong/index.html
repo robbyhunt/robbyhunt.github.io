@@ -100,7 +100,7 @@ function moveEverything() {
     ballX += ballSpeedX;
     ballY += ballSpeedY;
 
-    if(ballX > canvas.width-17) {
+    if(ballX > canvas.width-15) {
         if (ballY > paddle2Y &&
             ballY < paddle2Y+PADDLE_HEIGHT) {
                 ballSpeedX = -ballSpeedX;
@@ -114,7 +114,7 @@ function moveEverything() {
         }
     }
     
-    if(ballX < 17) {
+    if(ballX < 15) {
         if (ballY > paddle1Y &&
             ballY < paddle1Y+PADDLE_HEIGHT) {
                 ballSpeedX = -ballSpeedX;
