@@ -36,7 +36,7 @@ h3 {
 
 #featurework {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -49,11 +49,14 @@ h3 {
     flex-direction: column;
     flex-basis: 32%;
     text-align: center;
-    padding: 5px;
-    flex: 1;
+    align-items: center;
 }
 
-
-
-
+@media only screen and (max-width: 750px) {  
+    .work {
+        flex-basis: 100%;
+    }
+    #featurework img {
+        max-width: 65%;
+    }
 }
