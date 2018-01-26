@@ -14,24 +14,38 @@ header {
     display: flex;
     text-align: right;
     border-bottom: 4px solid lightblue;
+    
 }
 
 #logo img {
-    padding-top: 15px;
-    max-width: 85px;
+    padding-top: 50px;
+    padding-left: 485px;
+    max-width: 50px;
 }
 
 #nametitle {
     flex: 5;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(114, 171, 190);
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 2.2em;
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 1em;
+    margin-top: 0px;
+    margin-bottom: 25px;
 }
 
 #featureimage img {
     padding-top: 20px;
     max-width: 100%;
-}
-
-h3 {
-
 }
 
 #featurework {
