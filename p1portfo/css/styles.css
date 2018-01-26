@@ -1,20 +1,24 @@
 body {
-    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
+#wrapper {
+    max-width: 900px;
     display: flex;
     flex-direction: column;
-    border: 5px solid goldenrod;
 
 }
 
 header {
     display: flex;
     text-align: right;
-    border: 5px solid red;
+    border-bottom: 4px solid lightblue;
 }
 
 #logo img {
-    padding-top: 20px;
-    max-width: 100px;
+    padding-top: 15px;
+    max-width: 85px;
 }
 
 #nametitle {
@@ -22,6 +26,7 @@ header {
 }
 
 #featureimage img {
+    padding-top: 20px;
     max-width: 100%;
 }
 
@@ -32,27 +37,16 @@ h3 {
 #featurework {
     display: flex;
     justify-content: space-between;
-    border: 5px solid green;
     
 }
 
 #featurework img {
     max-width: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
-#work1 {
+.work {
     display: flex;
     flex-direction: column;
-}
-
-#work2 {
-    display: flex;
-    flex-direction: column;
-}
-
-#work3 {
-    display: flex;
-    flex-direction: column;
+    flex-basis: 32%;
+    text-align: center;
 }
