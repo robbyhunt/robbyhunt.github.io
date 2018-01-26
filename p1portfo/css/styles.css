@@ -19,7 +19,6 @@ header {
 
 #logo img {
     padding-top: 50px;
-    padding-left: 485px;
     max-width: 50px;
 }
 
@@ -72,5 +71,11 @@ h2 {
     }
     #featurework img {
         max-width: 65%;
+    }
+}
+
+@media only screen and (max-width: 450px) {  
+    #logo img {
+        max-width: 100px;
     }
 }
