@@ -142,10 +142,12 @@ margin-left: 3.5em;
 }
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
-</script><tw-passagedata pid="1" name="Basement" tags="" position="628,399" size="100,100">&lt;&lt;audio &quot;bgbasement&quot; loop volume 0 fadeto 1&gt;&gt;\
+
+</script><tw-passagedata pid="1" name="Basement" tags="" position="628,398" size="100,100">&lt;&lt;audio &quot;bgbasement&quot; loop volume 0 fadeto 1&gt;&gt;\
 You slip into consciousness.
 
 &lt;&lt;timed 4s t8n&gt;&gt;Rain falling... &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 6s t8n&gt;&gt;Thunder... &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 8s t8n&gt;&gt;Pipes groaning overhead... &lt;&lt;/timed&gt;&gt;
@@ -153,11 +155,16 @@ You slip into consciousness.
 
 &lt;&lt;timed 14s t8n&gt;&gt;You feel heat on your face, and hear muffled voices.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $isBound = 1&gt;&gt;
-&lt;&lt;timed 18s t8n&gt;&gt;&lt;&lt;linkreplace &quot;Stand Up&quot; t8n&gt;&gt;You attempt to pick yourself up but quickly find that your hands and feet are bound behind your back.
-&lt;&lt;timed 4s t8n&gt;&gt;&lt;&lt;if $player.powers == &quot;Super Strength&quot;&gt;&gt;
-&lt;&lt;linkreplace &quot;Break the bindings (Super Strength)&quot; t8n&gt;&gt; Your entire body tenses as you pull apart your arms and legs...&lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;audio &quot;rip&quot; volume 0.50 play&gt;&gt; With a couple of quick &#39;&#39;//rips//&#39;&#39;, you break free from the bindings.&lt;&lt;set $isBound = 0&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 4s t8n&gt;&gt;[[Look Around|Basement Look Around]]&lt;&lt;/timed&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Name" tags="" position="125,399" size="100,100">&lt;&lt;cacheaudio &quot;bgbasement&quot; &quot;audio/bgbasement.mp3&quot;&gt;&gt;\
+&lt;&lt;timed 18s t8n&gt;&gt;&lt;&lt;linkreplace &quot;Stand Up&quot;&gt;&gt;You attempt to pick yourself up but quickly find that your hands and feet are bound behind your back.
+
+&lt;&lt;timed 4s t8n&gt;&gt; &lt;&lt;if $player.powers == &quot;Cryokinesis&quot;&gt;&gt;&lt;&lt;linkreplace &quot;Freeze the bindings (Cryokinesis)&quot;&gt;&gt;&lt;&lt;audio &quot;frost&quot; volume 0.50 play&gt;&gt;Your fingers tingle as frost radiates from your hands... &lt;&lt;timed 4s t8n&gt;&gt;&lt;&lt;audio &quot;icebreak&quot; volume 0.50 play&gt;&gt;With a &#39;&#39;//crack//&#39;&#39; you break free from the now frozen bindings.&lt;&lt;set $isBound = 0&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;elseif $player.powers == &quot;Super Strength&quot;&gt;&gt;&lt;&lt;linkreplace &quot;Break the bindings (Super Strength)&quot;&gt;&gt;Your entire body tenses as you pull your arms and legs apart... &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;audio &quot;rip&quot; volume 0.50 play&gt;&gt;With a couple quick &#39;&#39;//rips//&#39;&#39; you break free from the bindings.&lt;&lt;set $isBound = 0&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
+[[Look Around|Basement Look Around]]
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Name" tags="" position="125,399" size="100,100">&lt;&lt;cacheaudio &quot;bgbasement&quot; &quot;audio/bgbasement.mp3&quot;&gt;&gt;\
 &lt;&lt;cacheaudio &quot;rip&quot; &quot;audio/rip.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;frost&quot; &quot;audio/frost.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;icebreak&quot; &quot;audio/icebreak.mp3&quot;&gt;&gt;\
 &lt;&lt;set $player = {
 	&quot;name&quot; : &quot;&quot;,
 	&quot;age&quot; : 0,
@@ -186,21 +193,21 @@ Powers: $player.powers
 
 [[Confirm|Basement]] or [[Start again|Name]]</tw-passagedata><tw-passagedata pid="6" name="Basement Look Around" tags="" position="750,400" size="100,100">&lt;&lt;if $isBound == 1&gt;&gt;The ropes around your wrists and ankles creak&lt;&lt;else&gt;&gt;You rub your aching wrists&lt;&lt;/if&gt;&gt; as you scan your surroundings...&lt;&lt;timed 4s t8n&gt;&gt; It seems that you&#39;re in the corner of a //damp// basement.&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 8s t8n&gt;&gt;You see a [[stairway|bmentstairway]],&lt;&lt;timed 1s t8n&gt;&gt; a [[pillar|bmentpillar]],&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2s t8n&gt;&gt; a [[table|bmenttable]],&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 3s t8n&gt;&gt; and a [[window|bmentwindow]].&lt;&lt;/timed&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="bmentstairway" tags="" position="900,475" size="100,100">A concealed stairway, presumably leading to the ground level of the building, is in the opposite corner of the room from your non-consensual resting spot.
+&lt;&lt;timed 8s t8n&gt;&gt;You see a [[stairway|bmentstairway]],&lt;&lt;timed 1s t8n&gt;&gt; a [[furnace|bmentfurnace]],&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 2s t8n&gt;&gt; a [[table|bmenttable]],&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 3s t8n&gt;&gt; and a [[window|bmentwindow]].&lt;&lt;/timed&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="bmentstairway" tags="" position="900,475" size="100,100">A concealed stairway, presumably leading to the ground level of the building, is in the opposite corner of the room from your non-consensual resting spot.
 &lt;&lt;timed 4s t8n&gt;&gt;
 &lt;&lt;if $isBound == 1&gt;&gt;From all the way over here you see nothing but the first two steps in the looming darkness.&lt;&lt;else&gt;&gt;As you approach you hear footsteps overhead, someone is walking around upstairs. A door sits atop the stairway in almost complete darkness.
 
 &lt;&lt;timed 4s t8n&gt;&gt;[[Climb the stairs|bmentstairwaydoor]]&lt;&lt;/timed&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;timed 4s t8n&gt;&gt;[[Look at the pillar|bmentpillar]]
+&lt;&lt;timed 4s t8n&gt;&gt;[[Look at the furnace|bmentfurnace]]
 [[Look at the table|bmenttable]]
 [[Look at the window|bmentwindow]]&lt;&lt;/timed&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="8" name="bmentpillar" tags="" position="900,325" size="100,100">[[Look at the stairway|bmentstairway]]
+</tw-passagedata><tw-passagedata pid="8" name="bmentfurnace" tags="" position="900,325" size="100,100">[[Look at the stairway|bmentstairway]]
 [[Look at the table|bmenttable]]
 [[Look at the window|bmentwindow]]</tw-passagedata><tw-passagedata pid="9" name="bmenttable" tags="" position="900,200" size="100,100">[[Look at the stairway|bmentstairway]]
-[[Look at the pillar|bmentpillar]]
+[[Look at the furnace|bmentfurnace]]
 [[Look at the window|bmentwindow]]</tw-passagedata><tw-passagedata pid="10" name="bmentwindow" tags="" position="900,600" size="100,100">[[Look at the stairway|bmentstairway]]
-[[Look at the pillar|bmentpillar]]
+[[Look at the furnace|bmentfurnace]]
 [[Look at the table|bmenttable]]</tw-passagedata><tw-passagedata pid="11" name="bmentstairwaydoor" tags="" position="1025,475" size="100,100">What excitement awaits?! Who knows.
 
 [[Restart|Name]] </tw-passagedata></tw-storydata></div>
