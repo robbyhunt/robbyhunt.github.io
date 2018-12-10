@@ -140,7 +140,11 @@ color: white;
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 </script><tw-passagedata pid="1" name="Basement" tags="" position="625,400" size="100,100">&lt;&lt;audio &quot;bgbasement&quot; loop volume 0 fadeto 0.40&gt;&gt;\
@@ -154,7 +158,7 @@ You slip into consciousness.
 &lt;&lt;set $isBound = 1&gt;&gt;
 &lt;&lt;timed 18s t8n&gt;&gt;&lt;&lt;linkreplace &quot;Stand Up&quot; t8n&gt;&gt;You attempt to pick yourself up but quickly find that your hands and feet are bound behind your back.
 
-&lt;&lt;timed 4s t8n&gt;&gt; &lt;&lt;if $player.powers == &quot;Cryokinesis&quot;&gt;&gt;&lt;&lt;linkreplace &quot;Freeze the bindings (Cryokinesis)&quot; t8n&gt;&gt;&lt;&lt;audio &quot;frost&quot; volume 0.25 play&gt;&gt;Your fingers tingle as frost radiates from your hands... &lt;&lt;timed 4s t8n&gt;&gt;&lt;&lt;audio &quot;icebreak&quot; volume 0.25 play&gt;&gt;With a &#39;&#39;//crack//&#39;&#39; you break free from the now frozen bindings.&lt;&lt;set $isBound = 0&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;elseif $player.powers == &quot;Super Strength&quot;&gt;&gt;&lt;&lt;linkreplace &quot;Break the bindings (Super Strength)&quot; t8n&gt;&gt;Your entire body tenses as you pull your arms and legs apart... &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;audio &quot;rip&quot; volume 0.25 play&gt;&gt;With a couple quick &#39;&#39;//rips//&#39;&#39; you break free from the bindings.&lt;&lt;set $isBound = 0&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;elseif $inventory.contains(&quot;a pocket knife&quot;)&gt;&gt;&lt;&lt;linkreplace &quot;Wiggle my pocket knife and cut the bindings (Stashed Weapon)&quot; t8n&gt;&gt;You wriggle, jiggle and wiggle attempting to work your stashed pocket knife out... &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;audio &quot;rip&quot; volume 0.25 play&gt;&gt;Success! and a perfect catch. You &#39;&#39;//saw//&#39;&#39; through the bindings and break free.&lt;&lt;set $isBound = 0&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;timed 4s t8n&gt;&gt; &lt;&lt;if $player.powers == &quot;Cryokinesis&quot;&gt;&gt;&lt;&lt;linkreplace &quot;Freeze the bindings (Cryokinesis)&quot; t8n&gt;&gt;&lt;&lt;audio &quot;frost&quot; volume 0.25 play&gt;&gt;Your fingers tingle as frost radiates from your hands... &lt;&lt;timed 4s t8n&gt;&gt;&lt;&lt;audio &quot;icebreak&quot; volume 0.25 play&gt;&gt;With a &#39;&#39;//crack//&#39;&#39; you break free from the now frozen bindings.&lt;&lt;set $isBound = 0&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;elseif $player.powers == &quot;Super Strength&quot;&gt;&gt;&lt;&lt;linkreplace &quot;Break the bindings (Super Strength)&quot; t8n&gt;&gt;Your entire body tenses as you pull your arms and legs apart... &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;audio &quot;rip&quot; volume 0.25 play&gt;&gt;With a couple quick &#39;&#39;//rips//&#39;&#39; you break free from the bindings.&lt;&lt;set $isBound = 0&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;elseif $inventory.contains(&quot;a pocket knife&quot;)&gt;&gt;&lt;&lt;linkreplace &quot;Wiggle out my stashed weapon and cut the bindings (Gadgeteer)&quot; t8n&gt;&gt;You twist, wriggle, and jiggle, attempting to work out your stashed pocket knife... &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;audio &quot;rip&quot; volume 0.25 play&gt;&gt;Success! and a perfect catch. You &#39;&#39;//saw//&#39;&#39; through the bindings and break free.&lt;&lt;set $isBound = 0&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
 [[Look Around|Basement Look Around]]
 
 &lt;&lt;linkreplace &quot;Look at my inventory&quot; t8n&gt;&gt;\
@@ -178,7 +182,8 @@ Your inventory is empty.\
 	&quot;name&quot; : &quot;&quot;,
 	&quot;age&quot; : 0,
 	&quot;gender&quot; : &quot;&quot;,
-	&quot;powers&quot; : &quot;&quot;
+	&quot;powers&quot; : &quot;&quot;,
+	&quot;dmg&quot; : 0
 }&gt;&gt;
 
 My name is &lt;&lt;textbox &quot;$player.name&quot; &quot;&quot; &quot;Gender&quot; autofocus&gt;&gt;
@@ -191,8 +196,6 @@ My name is &lt;&lt;textbox &quot;$player.name&quot; &quot;&quot; &quot;Gender&qu
 &lt;&lt;button &quot;Other&quot; &quot;Powers&quot;&gt;&gt;&lt;&lt;set $player.gender = &quot;Other&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 </tw-passagedata><tw-passagedata pid="4" name="Powers" tags="" position="375,400" size="100,100">I have the power of
 
-&lt;&lt;button &quot;Flight&quot; &quot;Character Confirm&quot;&gt;&gt;&lt;&lt;set $player.powers = &quot;Flight&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-
 &lt;&lt;button &quot;Super Speed&quot; &quot;Character Confirm&quot;&gt;&gt;&lt;&lt;set $player.powers = &quot;Super Speed&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;&lt;button &quot;Telekinesis&quot; &quot;Character Confirm&quot;&gt;&gt;&lt;&lt;set $player.powers = &quot;Telekinesis&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -203,12 +206,11 @@ My name is &lt;&lt;textbox &quot;$player.name&quot; &quot;&quot; &quot;Gender&qu
 
 &lt;&lt;button &quot;Cryokinesis&quot; &quot;Character Confirm&quot;&gt;&gt;&lt;&lt;set $player.powers = &quot;Cryokinesis&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
-&lt;&lt;button &quot;Telepathy&quot; &quot;Character Confirm&quot;&gt;&gt;&lt;&lt;set $player.powers = &quot;Telepathy&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Character Confirm" tags="" position="500,400" size="100,100">Name: $player.name
+&lt;&lt;linkreplace &quot;I have no powers. I use my wit, and a few nifty tools, to get the job done.&quot; t8n&gt;&gt;&lt;&lt;set $player.powers = &quot;Gadgeteer&quot;&gt;&gt;&lt;&lt;set $inventory.push(&quot;a pocket knife&quot;)&gt;&gt;&lt;&lt;goto &quot;Character Confirm&quot;&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Character Confirm" tags="" position="500,400" size="100,100">Name: $player.name
 Age: $player.age
 Gender: $player.gender
 Powers: $player.powers
 
-&lt;&lt;linkreplace &quot;Take the stashed weapon?&quot; t8n&gt;&gt;&lt;&lt;set $inventory.push(&quot;a pocket knife&quot;)&gt;&gt;Claimed.&lt;&lt;/linkreplace&gt;&gt;
 
 [[Confirm|Basement]] or [[Start again|Name]]</tw-passagedata><tw-passagedata pid="6" name="Basement Look Around" tags="" position="750,400" size="100,100">&lt;&lt;if $isBound == 1&gt;&gt;The ropes around your wrists and ankles creak&lt;&lt;else&gt;&gt;You rub your aching wrists&lt;&lt;/if&gt;&gt; as you scan your surroundings...&lt;&lt;timed 4s t8n&gt;&gt; It seems that you&#39;re in the south-east corner of a //damp// basement.&lt;&lt;/timed&gt;&gt;
 
@@ -266,10 +268,12 @@ It&#39;s a rusty trench knife with brass knuckles over the hilt. Could be an ant
 &lt;&lt;set $inventory.push(&quot;a rusty trench knife&quot;)&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 6s t8n&gt;&gt;&lt;&lt;if $inventory.contains(&quot;a hair pin&quot;)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;linkreplace &quot; and a hair pin.&quot; t8n&gt;&gt;
 It&#39;s a hair pin. Might be useful... &lt;&lt;linkreplace &quot;Take the hair pin? &quot; t8n&gt;&gt;You add the hair pin to your inventory.&lt;&lt;set $inventory.push(&quot;a hair pin&quot;)&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;timed 8s t8n&gt;&gt;
-&lt;&lt;if $player.powers == &quot;Telekinesis&quot; &amp; $isBound == 1&gt;&gt;&lt;&lt;linkreplace &quot;Use the knife to cut your bindings (Telekinesis)&quot; t8n&gt;&gt;&lt;&lt;set $isBound = &quot;0&quot;&gt;&gt;&lt;&lt;set $inventory.push(&quot;a rusty trench knife&quot;)&gt;&gt;You focus your abilities and move the knife with your mind... &lt;&lt;timed 2s t8n&gt;&gt;The knife floats behind your back and &#39;&#39;//saws//&#39;&#39; through the bindings. You break free and add a rusty trench knife with brass knuckles over the hilt to your inventory.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 10s t8n&gt;&gt;
+&lt;&lt;if $player.powers == &quot;Telekinesis&quot; &amp;&amp; $isBound == 1&gt;&gt;&lt;&lt;linkreplace &quot;Use the knife to cut your bindings (Telekinesis)&quot; t8n&gt;&gt;&lt;&lt;set $isBound = &quot;0&quot;&gt;&gt;&lt;&lt;set $inventory.push(&quot;a rusty trench knife&quot;)&gt;&gt;You focus your abilities and move the knife with your mind... &lt;&lt;timed 2s t8n&gt;&gt;The knife floats behind your back and &#39;&#39;//saws//&#39;&#39; through the bindings. You break free and add a rusty trench knife with brass knuckles over the hilt to your inventory.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $player.powers == &quot;Super Strength&quot; &amp; $isBound == 1&gt;&gt;&lt;&lt;linkreplace &quot;Break the bindings (Super Strength)&quot; t8n&gt;&gt;&lt;&lt;set $isBound = &quot;0&quot;&gt;&gt;Your entire body tenses as you pull your arms and legs apart... &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;audio &quot;rip&quot; volume 0.25 play&gt;&gt;With a couple quick &#39;&#39;//rips//&#39;&#39; you break free from the bindings.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;if $player.powers == &quot;Super Strength&quot; &amp;&amp; $isBound == 1&gt;&gt;&lt;&lt;linkreplace &quot;Break the bindings (Super Strength)&quot; t8n&gt;&gt;&lt;&lt;set $isBound = &quot;0&quot;&gt;&gt;Your entire body tenses as you pull your arms and legs apart... &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;audio &quot;rip&quot; volume 0.25 play&gt;&gt;With a couple quick &#39;&#39;//rips//&#39;&#39; you break free from the bindings. &lt;&lt;linkreplace &quot;Approach the table&quot; t8n&gt;&gt;&lt;&lt;goto &quot;bmenttable&quot;&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.powers != &quot;Super Strength&quot; &amp;&amp; $isBound == 1&gt;&gt;&lt;&lt;linkreplace &quot;Try to squeeze out of your bindings&quot; t8n&gt;&gt;You begin to twist your wrists in an attempt to free yourself... This is going to hurt.&lt;&lt;linkreplace &quot; Continue?&quot; t8n&gt;&gt;&lt;&lt;set $isBound = 0&gt;&gt;&lt;&lt;set $player.dmg += 5&gt;&gt; You hear a number of &#39;&#39;//pops//&#39;&#39; and &#39;&#39;//crunches//&#39;&#39; as your wrists are squeezed out of the bindings. +5dmg. &lt;&lt;linkreplace &quot;Approach the table&quot; t8n&gt;&gt;&lt;&lt;goto &quot;bmenttable&quot;&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
 &lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
 [[Go back to looking around the room|Basement Look Around 2]]
 
@@ -282,9 +286,19 @@ Your inventory is empty.\
 &lt;&lt;/for&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;/linkreplace&gt;&gt;\
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="bmentwindow" tags="" position="900,600" size="100,100">[[Go back to looking around the room|Basement Look Around 2]]
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="bmentwindow" tags="" position="900,600" size="100,100">A small rectangular cracked window by the ceiling of the southern wall.
 
-&lt;&lt;linkreplace &quot;Look at my inventory&quot; t8n&gt;&gt;\
+&lt;&lt;timed 4s t8n&gt;&gt;This must be where the storm outside is spilling in from.&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 8s t8n&gt;&gt;&lt;&lt;if $isBound == 1&gt;&gt;You can&#39;t investigate further without finding a way to get closer
+
+&lt;&lt;timed 4s t8n&gt;&gt;&lt;&lt;if $player.powers == &quot;Super Strength&quot; &amp;&amp; $isBound == 1&gt;&gt;&lt;&lt;linkreplace &quot;Break the bindings (Super Strength)&quot; t8n&gt;&gt;&lt;&lt;set $isBound = &quot;0&quot;&gt;&gt;Your entire body tenses as you pull your arms and legs apart... &lt;&lt;timed 2s t8n&gt;&gt;&lt;&lt;audio &quot;rip&quot; volume 0.25 play&gt;&gt;With a couple quick &#39;&#39;//rips//&#39;&#39; you break free from the bindings. &lt;&lt;linkreplace &quot;Approach the window&quot; t8n&gt;&gt;&lt;&lt;goto &quot;bmentwindow&quot;&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.powers != &quot;Super Strength&quot; &amp;&amp; $isBound == 1&gt;&gt;&lt;&lt;linkreplace &quot;Try to squeeze out of your bindings&quot; t8n&gt;&gt;You begin to twist your wrists in an attempt to free yourself... This is going to hurt.&lt;&lt;linkreplace &quot; Continue?&quot; t8n&gt;&gt;&lt;&lt;set $isBound = 0&gt;&gt;&lt;&lt;set $player.dmg += 5&gt;&gt; You hear a number of &#39;&#39;//pops//&#39;&#39; and &#39;&#39;//crunches//&#39;&#39; as your wrists are squeezed out of the bindings. +5dmg. &lt;&lt;linkreplace &quot;Approach the window&quot; t8n&gt;&gt;&lt;&lt;goto &quot;bmentwindow&quot;&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 4s t8n&gt;&gt;[[Go back to looking around the room|Basement Look Around 2]]&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 4s t8n&gt;&gt;&lt;&lt;linkreplace &quot;Look at my inventory&quot; t8n&gt;&gt;\
 &lt;&lt;if $inventory.length == 0&gt;&gt;\
 Your inventory is empty.\
 &lt;&lt;else&gt;&gt;\
@@ -292,7 +306,30 @@ Your inventory is empty.\
 -$inventory[_i] \
 &lt;&lt;/for&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;/linkreplace&gt;&gt;\</tw-passagedata><tw-passagedata pid="11" name="bmentstairwaydoor" tags="" position="1025,475" size="100,100">What excitement awaits?! &lt;&lt;timed 2s t8n&gt;&gt;Who knows because this is as far as I got
+&lt;&lt;/linkreplace&gt;&gt;\
+&lt;&lt;/timed&gt;&gt;&lt;&lt;else&gt;&gt;As you approach you feel the warmth of the furnace waning, and the chill of the storm dusting your face with a light frost.
+
+&lt;&lt;timed 4s t8n&gt;&gt;Your face... &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 6s t8n&gt;&gt;Suddenly you realise, you&#39;re not wearing your mask! &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 10s t8n&gt;&gt;Do you even rememeber how you got here?&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 12s t8n&gt;&gt;[[Go back to looking around the room|Basement Look Around 2]]&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 12s t8n&gt;&gt;&lt;&lt;linkreplace &quot;Look at my inventory&quot; t8n&gt;&gt;\
+&lt;&lt;if $inventory.length == 0&gt;&gt;\
+Your inventory is empty.\
+&lt;&lt;else&gt;&gt;\
+&lt;&lt;for _i = 0; _i &lt; $inventory.length; _i++&gt;&gt;\
+-$inventory[_i] \
+&lt;&lt;/for&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/linkreplace&gt;&gt;\
+&lt;&lt;/timed&gt;&gt;\
+&lt;&lt;/if&gt;&gt;&lt;&lt;/timed&gt;&gt;\
+
+
+
+</tw-passagedata><tw-passagedata pid="11" name="bmentstairwaydoor" tags="" position="1025,475" size="100,100">What excitement awaits?! &lt;&lt;timed 2s t8n&gt;&gt;Who knows because this is as far as I got
 
 [[Go back to looking around the room|Basement Look Around 2]]
 
