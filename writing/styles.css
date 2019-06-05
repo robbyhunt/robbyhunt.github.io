@@ -45,6 +45,11 @@ h2 {
     margin-bottom: 5px;
 }
 
+#sampletitle {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 #featureimage img {
     padding-top: 20px;
     max-width: 100%;
