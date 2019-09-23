@@ -114,7 +114,6 @@ p {
 
 #synopsistop {
       display: flex;
-      flex: 1;
   }
 
 #synopsistop img {
@@ -125,6 +124,17 @@ p {
     margin-top: 0px;
     margin-left: 10px;
   }  
+
+.story {
+    align-content: center;
+    max-width: 75%;
+    text-indent: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    line-height: 200%;
+}
 
 @media only screen and (max-width: 635px) {  
     .work {
