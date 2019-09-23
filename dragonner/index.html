@@ -3,20 +3,32 @@
 <head>
     <meta charset="UTF-8" />
     <title>Dragonner 🐸 🐉</title>
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
     <style>
       body {
+        color: white;
+        background-color: black;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-family: 'Mansalva', cursive;
       }
       canvas {
         width: 100%;
         max-width: 640px;
       }
+      h1 {
+        margin-bottom: 0px;
+      }
     </style>
 </head>
 <body>
-  <script src="js/phaser.min.js"></script>
-  <script src="js/game.js"></script>
+  <h1>Get the treasure!</h1>
+  <h2>(Click/tap to move)</h2>
+  <div class="game">
+    <script src="js/phaser.min.js"></script>
+    <script src="js/game.js"></script>
+  </div>
 </body>
 </html>
