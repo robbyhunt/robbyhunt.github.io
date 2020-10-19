@@ -48,6 +48,7 @@ h2 {
 #sampletitle {
     margin-top: 20px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 #featureimage img {
@@ -113,8 +114,16 @@ p {
   }
 
 #synopsistop {
-      display: flex;
-  }
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 675px) {
+    #synopsistop {
+        display: flex;
+        flex-direction: column;
+    }  
+}
 
 #synopsistop img {
     max-width: 100%;
@@ -123,7 +132,32 @@ p {
 .synopsis {
     margin-top: 0px;
     margin-left: 10px;
-  }  
+  }
+  
+#subtitle {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+#sample {
+    font-size: 28px;
+    margin: 10px 10px 0;
+}
+
+#title {
+    text-align: center;
+    font-size: 42px;
+    margin: 0;
+}
+
+#center {
+    text-align: center;
+}
+
+#cover {
+    max-width: 275px;
+}
 
 .story {
     align-content: center;
